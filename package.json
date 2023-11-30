@@ -23,5 +23,9 @@
   "bugs": {
     "url": "https://github.com/ntndlcrt/react-gsap-custom-cursor/issues"
   },
-  "homepage": "https://github.com/ntndlcrt/react-gsap-custom-cursor#readme"
+  "homepage": "https://github.com/ntndlcrt/react-gsap-custom-cursor#readme",
+  "devDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
 }
