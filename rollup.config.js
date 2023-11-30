@@ -2,6 +2,7 @@ import babel from "@rollup/plugin-babel"
 import resolve from "@rollup/plugin-node-resolve"
 import external from "rollup-plugin-peer-deps-external"
 import postcss from "rollup-plugin-postcss"
+import terser from "@rollup/plugin-terser"
 
 export default [
   {
@@ -21,9 +22,6 @@ export default [
       postcss({
         plugins: [],
         minimize: true,
-        sourceMap: "inline",
-        extract: true,
-        extensions: [".css"],
       }),
       babel({
         exclude: "node_modules/**",
@@ -31,6 +29,7 @@ export default [
       }),
       resolve(),
       external(),
+      terser(),
     ],
   },
 ]
