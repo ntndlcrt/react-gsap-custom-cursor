@@ -1,2 +1,1 @@
-import Cursor from "./Cursor/Cursor"
-export default Cursor
+export * from "./component/Cursor/"

@@ -17,7 +17,10 @@
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "npx sass ./src/Cursor/Cursor.scss ./src/Cursor/Cursor.css"
+    "sass": "npx sass ./src/Cursor/Cursor.scss ./src/Cursor/Cursor.css",
+    "build": "rollup -c",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "author": "Antoine Delcourte (@ntndlcrt on github)",
   "license": "ISC",
@@ -26,10 +29,27 @@
   },
   "homepage": "https://github.com/ntndlcrt/react-gsap-custom-cursor#readme",
   "devDependencies": {
+    "@babel/preset-react": "^7.23.3",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@storybook/addon-essentials": "^7.6.1",
+    "@storybook/addon-interactions": "^7.6.1",
+    "@storybook/addon-links": "^7.6.1",
+    "@storybook/addon-onboarding": "^1.0.8",
+    "@storybook/blocks": "^7.6.1",
+    "@storybook/react": "^7.6.1",
+    "@storybook/react-webpack5": "^7.6.1",
+    "@storybook/test": "^7.6.1",
+    "gsap": "^3.12.3",
+    "prop-types": "^15.8.1",
+    "rollup": "^4.6.1",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "sass": "^1.69.5",
+    "storybook": "^7.6.1"
+  },
+  "peerDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
-  },
-  "dependencies": {
-    "sass": "^1.69.5"
   }
 }
