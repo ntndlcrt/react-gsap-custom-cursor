@@ -1,0 +1,27 @@
+{
+  "name": "react-gsap-custom-cursor",
+  "version": "0.0.0",
+  "description": "React GSAP custom cursor component",
+  "main": "index.js",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ntndlcrt/react-gsap-custom-cursor.git"
+  },
+  "keywords": [
+    "React",
+    "GSAP",
+    "custom",
+    "cursor",
+    "component"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Antoine Delcourte (@ntndlcrt on github)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ntndlcrt/react-gsap-custom-cursor/issues"
+  },
+  "homepage": "https://github.com/ntndlcrt/react-gsap-custom-cursor#readme"
+}
