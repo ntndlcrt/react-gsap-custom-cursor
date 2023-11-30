@@ -16,7 +16,8 @@
     "component"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "npx sass ./src/Cursor/Cursor.scss ./src/Cursor/Cursor.css"
   },
   "author": "Antoine Delcourte (@ntndlcrt on github)",
   "license": "ISC",
@@ -27,5 +28,8 @@
   "devDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
+  },
+  "dependencies": {
+    "sass": "^1.69.5"
   }
 }

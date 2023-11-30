@@ -1,0 +1,71 @@
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 150;
+  contain: layout style size;
+  pointer-events: none;
+  will-change: transform;
+  transition: opacity 0.3s, color 0.4s;
+}
+.cursor:before {
+  content: "";
+  position: absolute;
+  top: -24px;
+  left: -24px;
+  display: block;
+  width: 48px;
+  height: 48px;
+  transform: scale(0);
+  background: currentColor;
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out, opacity 0.1s, background 0.4s;
+}
+.cursor__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  color: white;
+  font-size: 32px;
+  line-height: 1;
+  text-align: center;
+  letter-spacing: -0.01em;
+  transition: opacity 0.4s, transform 0.3s;
+}
+.cursor.--visible:before {
+  transform: scale(0.2);
+}
+.cursor.--visible.--active:before {
+  transform: scale(0.23);
+  transition-duration: 0.2s;
+}
+.cursor.--pointer:before {
+  transform: scale(0.15);
+}
+.cursor.--text:before {
+  transform: scale(1.7) !important;
+}
+.cursor.--text.--aside:before {
+  transform: translate(-50%, -50%) scale(1.7) !important;
+}
+.cursor.--text .cursor-text {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1) !important;
+}
+.cursor.--text.--active:before {
+  transform: scale(1.6);
+  transition-duration: 0.2s;
+}
+.cursor.--lg:before {
+  transform: scale(2);
+}
+.cursor.--hidden:before {
+  transform: scale(0);
+}
+
+/*# sourceMappingURL=Cursor.css.map */
