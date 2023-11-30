@@ -2,8 +2,7 @@
   "name": "react-gsap-custom-cursor",
   "version": "0.0.0",
   "description": "React GSAP custom cursor component",
-  "main": "index.js",
-  "type": "module",
+  "main": "dist/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ntndlcrt/react-gsap-custom-cursor.git"
