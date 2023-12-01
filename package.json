@@ -1,6 +1,6 @@
 {
   "name": "react-gsap-custom-cursor",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "React GSAP custom cursor component",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
@@ -17,7 +17,7 @@
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "npx sass ./src/Cursor/Cursor.scss ./src/Cursor/Cursor.css",
+    "sass": "npx sass ./src/component/Cursor.scss ./src/component/Cursor.css",
     "build": "rollup -c",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
