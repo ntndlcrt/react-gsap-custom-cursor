@@ -13,24 +13,25 @@
   z-index: 150;
   contain: layout style size;
   pointer-events: none;
-  will-change: transform;
-  transition: opacity 0.3s, color 0.4s;
+  will-change: transform, opacity, color, top, left;
+  transition: opacity 0.3s, color 0.4s, top 0.4s, left 0.4s;
 
   &:before {
     content: "";
     position: absolute;
-    top: -vw(24);
-    left: -vw(24);
+    top: - vw(24);
+    left: - vw(24);
     display: block;
     width: vw(48);
     height: vw(48);
     transform: scale(0);
-    background: currentColor;
+    background: black;
     border-radius: 50%;
     transition: transform 0.3s ease-in-out, opacity 0.1s, background 0.4s;
   }
 
   &__text {
+    font-feature-settings: "ss02" on !important;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -40,7 +41,7 @@
     justify-content: center;
     opacity: 0;
     color: white;
-    font-size: vw(32);
+    font-size: vw(28);
     line-height: 1;
     text-align: center;
     letter-spacing: -0.01em;
@@ -54,20 +55,23 @@
   }
 
   &.--pointer {
+    top: - vw(12);
+    left: - vw(12);
+
     &:before {
-      transform: translate(-25%, -25%) scale(1) !important;
-      transition-duration: 0.2s;
+        transform: scale(1.2);
+        transition-duration: 0.2s;
     }
 
     #{$root} {
       &__text {
         opacity: 1;
-        transform: translate(-105%, -85%) scale(1) !important;
+        transform: translate(-50%, -50%) scale(1) !important;
       }
     }
 
     &.--active:before {
-      transform: translate(-25%, -25%) scale(1.5) !important;
+      transform: translate(-25%, -25%) scale(1.5);
       transition-duration: 0.2s;
     }
   }

@@ -165,7 +165,7 @@ export default function Cursor() {
       x: bound.left + target.offsetWidth / 2,
     }
 
-    _move(state.stick.x, state.stick.y, 5)
+    // _move(state.stick.x, state.stick.y, 5)
   }
 
   const _removeStick = () => {

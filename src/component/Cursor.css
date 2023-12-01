@@ -5,23 +5,24 @@
   z-index: 150;
   contain: layout style size;
   pointer-events: none;
-  will-change: transform;
-  transition: opacity 0.3s, color 0.4s;
+  will-change: transform, opacity, color, top, left;
+  transition: opacity 0.3s, color 0.4s, top 0.4s, left 0.4s;
 }
 .cursor:before {
   content: "";
   position: absolute;
-  top: -vw(24);
-  left: -vw(24);
+  top: -1.6666666667vw;
+  left: -1.6666666667vw;
   display: block;
   width: 3.3333333333vw;
   height: 3.3333333333vw;
   transform: scale(0);
-  background: currentColor;
+  background: black;
   border-radius: 50%;
   transition: transform 0.3s ease-in-out, opacity 0.1s, background 0.4s;
 }
 .cursor__text {
+  font-feature-settings: "ss02" on !important;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -31,7 +32,7 @@
   justify-content: center;
   opacity: 0;
   color: white;
-  font-size: 2.2222222222vw;
+  font-size: 1.9444444444vw;
   line-height: 1;
   text-align: center;
   letter-spacing: -0.01em;
@@ -40,16 +41,20 @@
 .cursor.--visible:before {
   transform: scale(0.2);
 }
+.cursor.--pointer {
+  top: -0.8333333333vw;
+  left: -0.8333333333vw;
+}
 .cursor.--pointer:before {
-  transform: translate(-25%, -25%) scale(1) !important;
+  transform: scale(1.2);
   transition-duration: 0.2s;
 }
 .cursor.--pointer .cursor__text {
   opacity: 1;
-  transform: translate(-105%, -85%) scale(1) !important;
+  transform: translate(-50%, -50%) scale(1) !important;
 }
 .cursor.--pointer.--active:before {
-  transform: translate(-25%, -25%) scale(1.5) !important;
+  transform: translate(-25%, -25%) scale(1.5);
   transition-duration: 0.2s;
 }
 .cursor.--text:not(.--pointer) .cursor__text {

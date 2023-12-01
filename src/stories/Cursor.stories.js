@@ -1,13 +1,4 @@
 import React from "react"
-// import { storiesOf } from "@storybook/react"
-
-// import Cursor from "../component/Cursor"
-
-// const stories = storiesOf("Cursor", module)
-
-// stories.add("Default", () => {
-//   return <Cursor />
-// })
 
 import Cursor from "../component/Cursor"
 
@@ -17,5 +8,19 @@ export default {
 }
 
 export const Default = {
-  render: () => <Cursor />,
+  render: () => (
+    <>
+      <div
+        style={{
+          width: "100vw",
+          height: "100vh",
+        }}
+      >
+        <h1 data-cursor="--pointer" data-cursor-text="💡">
+          Cursor
+        </h1>
+      </div>
+      <Cursor />
+    </>
+  ),
 }
