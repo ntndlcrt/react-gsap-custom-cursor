@@ -55,7 +55,7 @@
 
   &.--pointer {
     &:before {
-      transform: translate(-25%, -25%) scale(1);
+      transform: translate(-25%, -25%) scale(1) !important;
       transition-duration: 0.2s;
     }
 
@@ -67,7 +67,7 @@
     }
 
     &.--active:before {
-      transform: translate(-25%, -25%) scale(1.5);
+      transform: translate(-25%, -25%) scale(1.5) !important;
       transition-duration: 0.2s;
     }
   }
