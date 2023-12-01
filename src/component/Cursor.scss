@@ -1,3 +1,10 @@
+@use "sass:math";
+
+@function vw($px) {
+  $vw-context: (1440 * 0.01) * 1;
+  @return math.div($px, $vw-context) * 1vw;
+}
+
 .cursor {
   $root: &;
   position: fixed;
@@ -12,11 +19,11 @@
   &:before {
     content: "";
     position: absolute;
-    top: -24px;
-    left: -24px;
+    top: -vw(24);
+    left: -vw(24);
     display: block;
-    width: 48px;
-    height: 48px;
+    width: vw(48);
+    height: vw(48);
     transform: scale(0);
     background: currentColor;
     border-radius: 50%;
@@ -33,7 +40,7 @@
     justify-content: center;
     opacity: 0;
     color: white;
-    font-size: 32px;
+    font-size: vw(32);
     line-height: 1;
     text-align: center;
     letter-spacing: -0.01em;
@@ -44,46 +51,39 @@
     &:before {
       transform: scale(0.2);
     }
-
-    &.--active:before {
-      transform: scale(0.23);
-      transition-duration: 0.2s;
-    }
   }
 
   &.--pointer {
     &:before {
-      transform: scale(0.15);
-    }
-  }
-
-  &.--text {
-    &:before {
-      transform: scale(1.7) !important;
-    }
-
-    &.--aside {
-      &:before {
-        transform: translate(-50%, -50%) scale(1.7) !important;
-      }
+      transform: translate(-25%, -25%) scale(1);
+      transition-duration: 0.2s;
     }
 
     #{$root} {
-      &-text {
+      &__text {
         opacity: 1;
-        transform: translate(-50%, -50%) scale(1) !important;
+        transform: translate(-105%, -85%) scale(1) !important;
       }
     }
 
     &.--active:before {
-      transform: scale(1.6);
+      transform: translate(-25%, -25%) scale(1.5);
       transition-duration: 0.2s;
+    }
+  }
+
+  &.--text:not(.--pointer) {
+    #{$root} {
+      &__text {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1) !important;
+      }
     }
   }
 
   &.--lg {
     &:before {
-      transform: scale(2);
+      transform: scale(1.2);
     }
   }
 

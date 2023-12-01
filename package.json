@@ -1,6 +1,6 @@
 {
   "name": "react-gsap-custom-cursor",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "React GSAP custom cursor component",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
